@@ -1,0 +1,85 @@
+{% load_static%}
+
+<form method='POST'>
+{% csrf_token %}
+
+
+      <div class="mb-3 row">
+    <label for="staticTitle" class="col-sm-2 col-form-label">Title</label>
+    <div class="col-sm-10">
+      {{form.title}}
+  </div>
+
+    <div class="mb-3 row">
+
+    <label for="staticUnitprice" class="col-sm-2 col-form-label">Unit price</label>
+  
+    <div class="col-sm-10">
+        Rs.  {{form.unit_price}}
+    </div>
+
+  </div>
+
+    <div class="mb-3 row">
+    <label for="staticCategory" class="col-sm-2 col-form-label">Category</label>
+    <div class="col-sm-10">
+      {{form.category}}
+    </div>
+  </div>
+
+    <div class="mb-3 row">
+
+    <label for="staticUnit" class="col-sm-2 col-form-label">Unit</label>
+
+    <div class="col-sm-10">
+        {{form.unit}}
+    </div>
+  </div>
+
+    <div class="mb-3 row">
+    <label for="staticQuanity" class="col-sm-2 col-form-label">Quantity</label>
+    <div class="col-sm-10">
+      {{form.quantity}}
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="staticLocation" class="col-sm-2 col-form-label">Location</label>
+    <div class="col-sm-10">
+      {{form.location}}
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="staticAvaibility" class="col-sm-2 col-form-label">Avaibility</label>
+    <div class="col-sm-10">
+      {{form.Avaibility}}
+    </div>
+  </div>    
+  <div class="mb-3 row">
+    <label for="staticDesciption" class="col-sm-2 col-form-label " >Desciption</label>
+    <div class="col-sm-10" height=100px width=500px>
+        {{form.description}}              
+    </div>
+  </div> 
+    <button type='submit'> SUBMIT</button>
+
+        {{form.errors}}
+
+
+     <p> 
+        {% for message in messages %}
+        <style>
+      blink {
+        color: #1c87c9;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: sans-serif;
+      }
+    </style> 
+           <blink class='container'>{{message}}  </blink> 
+        {% endfor %}
+
+     </p>  
+  </form> 
+  </div>s

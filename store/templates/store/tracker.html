@@ -1,0 +1,20 @@
+{% extends 'store/base.html'  %}
+
+{% block content %}
+
+    <div class="col my-4">
+
+        <h2>Your Order Status:   </h2>
+
+            <div class="my-4">
+                    {% for x in qs %}
+               <p>Description: {{x.description}} </p>
+               <br> <hr>
+               <p>DateTime: {{x.timestamp}}</p>
+
+                {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+

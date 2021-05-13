@@ -1,0 +1,16 @@
+{% load cart_tag %}
+
+Total Length :: {{request.session.cart|length}}
+
+Cart Detail:
+
+{% for key,value in request.session.cart.items %}
+
+product:{{value.name}} 
+price:{{value.price}}
+quanity: {{value.quantity}}
+  <ifame scr='{{value.image}}' height=500px width=300px> </ifame> 
+  <br>
+  total price:Total {{ value.price|multiply:value.quantity }}
+
+{% endfor %}

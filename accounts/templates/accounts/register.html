@@ -1,0 +1,27 @@
+<html>
+
+<head>
+   
+</head>
+
+<body>
+ <h1> This is the register.html </h1>
+ <center>       
+ <div>
+    
+    <form method='POST'>
+        {%  csrf_token %}
+        {{form.as_p}}
+        <br> <hr> 
+
+           <button type="submit ">Submit  </button> 
+
+        <br>
+        <p>Already have account? <a href='{% url "login" %}'> Login  </a></p>
+     
+    </form>
+
+        </div>  </center>
+</body>
+
+</html>

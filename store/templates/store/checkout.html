@@ -1,0 +1,81 @@
+{% extends  'store/base.html'  %}
+
+{%  block content  %}
+
+  <div>
+                 <div>
+                  <h1> Add the shipping address</h1>
+
+                  <form method='POST'>
+                    {%  csrf_token%}
+
+                        {{form.as_p}}
+
+                    
+                          <br> <br>
+                         {{orderform.as_p}}
+
+                           <button type='submit'> Place order </button> 
+                    </form>
+
+                    <br> <br> <br> <br>
+
+                  
+
+
+  <!--
+        <div class="form-group col-md-6">
+      <label for="inputName4">Name</label>
+      <input type="name" class="form-control" name='name'  id="inputname4" placeholder="name">
+   </div>
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" name='email' id="inputEmail4" placeholder="Email">
+   </div>
+    <div class="form-group col-md-6">
+      <label for="inputPhone4">Password</label>
+      <input type="number" class="form-control" name='phone 'id="4" placeholder="Enter 10 digit phone no.">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" name='address1' id="inputAddress" placeholder="1234 Main St">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control"  name='address2' id="inputAddress2" placeholder="Apartment, studio, or floor">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">City</label>
+      <input type="text" state='city' class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">State</label>
+      <select id="inputState" name='state'  class="form-control">
+        <option selected>Choose...</option>
+        <option>Delhi-NCR </option>
+        <option>Uttar Pradesh </option>
+        <option>Haryana</option>
+        <option>Punjab</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip">pincode</label>
+      <input type="text" name='pincode' class="form-control" id="inputZip">
+    </div>
+  </div>
+  
+  </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>  
+--->
+
+                  
+
+                </div>
+
+
+
+{%  endblock %}

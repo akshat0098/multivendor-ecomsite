@@ -1,0 +1,31 @@
+{% extends 'store/base.html' %}
+
+{% block content%}
+  <div class='container card d-grid gap-3 '> 
+     <h1 class='card '> Create Product form
+ </h1>
+        <form method='POST' action='{% url 'Upload_product' %}'>
+          {% csrf_token %}
+            {{form.as_p}}
+        
+    <button type='submit' > SUBMIT</button>
+
+    </form>
+     <p> 
+        {% for message in messages %}
+        <style>
+      blink {
+        color: #1c87c9;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: sans-serif;
+      } 
+    </style> 
+           <blink class='container'>{{message}}  </blink> 
+        {% endfor %}
+
+     </p>  
+  </form> 
+  </div>
+{% endblock %}
+

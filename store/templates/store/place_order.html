@@ -1,0 +1,24 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+        <div class ='container card xd'>
+        <form method = 'POST'>
+            {% csrf_token %}
+
+               {{form.quantity.label}}
+               {{form.quantity}}
+
+               {{form.order_payment_mode.label}}
+                 {{form.order_payment_mode}}
+                
+                   {{form.shipping_address.label}}
+                     {{form.shipping_address}}
+                 <span > Sorry for  Problem , Work under contruction please place order by cart :)</span>
+            
+                <button  type="submit"> BUY   </button>   
+
+
+        </form>
+                </div>
+{% endblock %}
+

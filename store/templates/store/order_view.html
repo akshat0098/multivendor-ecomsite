@@ -1,0 +1,31 @@
+{% extends 'store/base.html' %}
+
+
+{% block content %}
+    <div class='container'>
+
+<table class="table table-striped">
+    <legend> ORDER PAGE </legend>
+  <thead>
+
+    <tr>
+      <th scope="col">Product Title</th>
+      <th scope="col">Status</th>
+      <th scope="col">Expented delivery</th>
+      <th scope="col">Track Order</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+      {%   for order in orders %}
+    <tr>
+      <td scope="row">{{order.product}}</td>
+      <td>{{order.status}}</td>
+      <td> Can't be predicted </td>
+      <td><a href="{% url 'tracker' order.id %} ">Track </a> </td>
+    </tr>
+     {% endfor%}
+  </tbody>
+</table>  </div>
+
+{% endblock %}

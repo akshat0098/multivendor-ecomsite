@@ -1,0 +1,53 @@
+{% extends 'store/base.html' %}
+ 
+
+{% block content %}
+
+<h1>  Welcome  {{request.user}} </h1>
+
+        <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title">CART TOTAL: INR {{cart.total_price}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Cart</h6>
+
+    <a href="{% url 'checkout' %}" class="card-link">Checkout</a>
+  
+  </div>
+</div>
+
+
+
+
+
+        <div class='container'>
+            <div>
+        <table class="table">
+                <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">qty</th>
+                </tr>
+                </thead>
+  <tbody>
+    <tr>
+            {%  for item in items %}
+               <th scope="row"></th>
+             <td>{{item.product}}</td>
+               <td>{{item.price}}</td>
+                <td> 
+                <form method='POST'>   {% csrf_token%}
+                   <input  value="{{item.id}}" name='item' hidden>     
+                <input value='{{item.qty}}' name='qty' >
+                <span> click only when wnated to submit the changess</span>
+        <button type='submit'> submit  </button>                             
+</form> </td>
+    </tr>
+     {% endfor %}
+
+        </table>
+        </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'store/base.html' %}
+
+{% block content%}
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Product Title</th>
+      <th scope="col">Price</th>
+      <th scope="col">Category</th>
+      <th scope="col">Avaibility</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+     <p> {{request.user.id}}</p>
+      {%   for pro in product %}
+    <tr>
+      <td scope="row">{{pro.title}}</td>
+        
+      <td>{{pro.unit_price}}</td>
+      <td>{{pro.category}}</td>
+      <td>{{pro.Avaibility}}</td>
+ 
+      <td>  
+        <button  class='btn btn-success cart'>  
+          <a href="{% url 'cart' pro.id %}">
+              Add to Cart </button> </a>  
+            
+            </td>
+           
+      <td>
+        
+        <a href="{% url 'place_order' pro.id %} ">  Buy   </a>   </td>
+      
+
+    </tr>
+     {% endfor%}
+  </tbody>
+</table>
+
+
+{% endblock %}
+
