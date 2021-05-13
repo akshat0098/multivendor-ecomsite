@@ -64,8 +64,7 @@ razorpay_account_id = "mTJaH0RVtc0QiSmiuwWylob0"
 
 
 #Heroku settings
-import django_heroku
-django_heroku.settings(locals())
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'ecom.urls'
