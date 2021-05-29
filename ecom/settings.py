@@ -163,4 +163,4 @@ EMAIL_HOST = 'smtp.office365.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'djangoi123@outlook.com'
-EMAIL_HOST_PASSWORD = 'harharmahadev'
+EMAIL_HOST_PASSWORD = '*********'
