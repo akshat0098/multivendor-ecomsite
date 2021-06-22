@@ -55,8 +55,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-razorpay_id = "rzp_test_INSgDKi8bi4mH9"
-razorpay_account_id = "mTJaH0RVtc0QiSmiuwWylob0"
+razorpay_id = ""
+razorpay_account_id = "
 
 
  # Insert Whitenoise Middleware. 
